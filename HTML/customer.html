@@ -43,56 +43,33 @@
     <!-- Add / Update / Delete  Customer  -->
 
     <div class="form-floating mb-3 ms-3">
-        <input type="email" class="form-control-lg" id="floatingInput" placeholder="Name">
+        <input type="email" class="form-control-lg" id="txtName" placeholder="Name">
         <label for="floatingInput"></label>
     </div>
     <div class="form-floating mb-3 ms-3 ">
-        <input type="password" class="form-control-lg" id="floatingPassword" placeholder="Phone Number">
-        <label for="floatingPassword"></label>
+        <input type="email" class="form-control-lg" id="txtPhone" placeholder="Phone Number">
+        <label for="floatingInput"></label>
     </div>
     <div class="form-floating mb-3 ms-3">
-        <input type="password" class="form-control-lg" id="floatingPassword" placeholder="Age">
-        <label for="floatingPassword"></label>
+        <input type="email" class="form-control-lg" id="txtAge" placeholder="Age">
+        <label for="floatingInput"></label>
     </div>
 
     <div class="container">
         <div class="row">
-            <button type="button" class="btn btn-success me-3" id="btnAdd" onclick="btnAddOnClick()">ADD</button>
+            <button type="button" class="btn btn-success me-3" id="btnAdd" onclick="btnAddOnClick()">Add</button>
             <button type="button" class="btn btn-primary me-3" id="btnUpdate">Update</button>
-            <button type="button" class="btn btn-danger me-3" id="btnDelete">Delete</button>
         </div>
     </div>
 
+        <!-- Table  -->
 
     <table class="table table-striped mt-3" id="customerTable">
-  <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Phone</th>
       <th scope="col">Age</th>
     </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
 </table>
 
 
@@ -101,8 +78,8 @@
 
 
 
-
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/customerManage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
