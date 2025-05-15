@@ -1,4 +1,5 @@
 let customers = [];
+// BTN ADD
 
 function btnAddOnClick() {
     Swal.fire("Customer Added!");
@@ -8,14 +9,14 @@ function btnAddOnClick() {
 
     let tblCustomers = document.getElementById("customerTable");
 
-   let tableBody = ` <tr>
+    let tableBody = ` <tr>
       <th scope="col">Name</th>
       <th scope="col">Phone</th>
       <th scope="col">Age</th>
       <th>Actions</th>
     </tr>`;
 
-    customers.forEach(data =>{
+    customers.forEach(data => {
         tableBody += `<tr>
                          <td>${data.name}</td>
                          <td>${data.phone}</td>
@@ -25,38 +26,37 @@ function btnAddOnClick() {
                     <tr>`
     });
     console.log(tableBody);
-    tblCustomers.innerHTML=tableBody;
-    
+    tblCustomers.innerHTML = tableBody;
+
 }
 
 function addCustomer() {
-    let name =  document.getElementById("txtName").value;
-    let phone =document.getElementById("txtPhone").value;
-    let age =document.getElementById("txtAge").value;
-    console.log(name+"|"+phone+"|"+age);
+    let name = document.getElementById("txtName").value;
+    let phone = document.getElementById("txtPhone").value;
+    let age = document.getElementById("txtAge").value;
 
     customers.push({
         name,
         phone,
-        age       
-    });  
-    
+        age
+    });
+
     document.getElementById("txtName").value = "";
     document.getElementById("txtPhone").value = "";
     document.getElementById("txtAge").value = "";
 }
 
 function loadTable() {
-   let tblCustomers = document.getElementById("customerTable");
+    let tblCustomers = document.getElementById("customerTable");
 
-   let tableBody = `  <tr>
+    let tableBody = `  <tr>
             <th>Name</th>
             <th>Phone</th>
             <th>Age</th>
             <th>Actions</th>
         </tr>`;
 
-    customers.forEach(data =>{
+    customers.forEach(data => {
         tableBody += `<tr>
                          <td>${data.name}</td>
                          <td>${data.phone}</td>
@@ -68,17 +68,17 @@ function loadTable() {
 }
 
 function deleteCustomer(index) {
-     Swal.fire({
+    Swal.fire({
         title: "Are you sure?",
         showCancelButton: true,
         confirmButtonText: "Yes, delete it!",
-        cancelButtonText: "Cancel" 
-     }).then((result) => {
+        cancelButtonText: "Cancel"
+    }).then((result) => {
         if (result.isConfirmed) {
-            customers.splice(index,1);
-             loadTable();
-             Swal.fire("Deleted!");
+            customers.splice(index, 1);
+            loadTable();
+            Swal.fire("Deleted!");
         }
-     })
-      
+    })
+
 }
