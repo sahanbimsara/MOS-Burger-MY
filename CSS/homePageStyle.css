@@ -89,3 +89,7 @@ body{
     text-align: center;
     margin-top: 50px;
 }
+
+#burgerTab{
+    background-color: beige;
+}
